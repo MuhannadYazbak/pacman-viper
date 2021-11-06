@@ -1,4 +1,4 @@
-package application;
+package control;
 
 import java.io.IOException;
 
@@ -11,14 +11,14 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class LastGamesController {
+public class GameBoardController {
 	@FXML
 	Button backBtn;
 	@FXML
 	private void backToMain(ActionEvent event) throws IOException {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/Main.fxml"));
 		Scene scene = new Scene(pane);
-		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		stage.setScene(scene);
 		stage.setTitle("Main Screen");
 		stage.show();

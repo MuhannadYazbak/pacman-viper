@@ -1,4 +1,4 @@
-package application;
+package control;
 
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ public class QuestionController {
 	Button backBtn;
 	@FXML
 	private void backToMain(ActionEvent event) throws IOException {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/Main.fxml"));
 		Scene scene = new Scene(pane);
 		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		stage.setScene(scene);

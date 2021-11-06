@@ -1,4 +1,4 @@
-package application;
+package control;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class MainController {
 	Button startGameBtn, lastGamesBtn, questionsBtn;
 	@FXML
 	private void LastGames(ActionEvent event) throws IOException {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("LastGames.fxml"));
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/LastGames.fxml"));
 		Scene scene = new Scene(pane);
 		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		stage.setScene(scene);
@@ -27,7 +27,7 @@ public class MainController {
 	}
 	@FXML
 	private void startGame(ActionEvent event) throws IOException {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("startGame.fxml"));
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/startGame.fxml"));
 		Scene scene = new Scene(pane);
 		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		stage.setScene(scene);
@@ -36,7 +36,7 @@ public class MainController {
 	}
 	@FXML
 	private void questions(ActionEvent event) throws IOException {
-		AnchorPane pane = FXMLLoader.load(getClass().getResource("questions.fxml"));
+		AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/questions.fxml"));
 		Scene scene = new Scene(pane);
 		Stage stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		stage.setScene(scene);
